@@ -1,19 +1,9 @@
 #include <stdio.h>
-
-
-
 /**
- * description:A C Program That Print With puts Function
+ * main - Entry point
  *
- *
- *
- *
- *
- * main:Entery-point
- *
- *
- * return:Alawys 0 (ASuccess)
-*/
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
