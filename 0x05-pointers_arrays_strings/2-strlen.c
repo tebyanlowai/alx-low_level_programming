@@ -15,5 +15,5 @@ int counter;
 for (counter = 0; *s != '\0'; s++)
 ++counter;
 
-retern(counter);
+return(counter);
 }
