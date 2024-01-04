@@ -16,7 +16,7 @@ char *ptr = s;
 
 while (*s)
 {
-for (ii = 0; i <= 52; i++)
+for (i = 0; i <= 52; i++)
 {
 if (*s == rot13[i])
 {
@@ -26,5 +26,5 @@ break;
 }
 s++;
 }
-return (prt);
+return (ptr);
 }
