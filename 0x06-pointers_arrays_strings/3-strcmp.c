@@ -16,12 +16,10 @@ while (*s1)
 if (*s1 != *s2)
 {
 equal = ((int)*s1 - 48) - ((int)*s2 - 48);
-braak;
+break;
 }
 s1++;
 s2++;
 }
-
 return (equal);
-
 }
