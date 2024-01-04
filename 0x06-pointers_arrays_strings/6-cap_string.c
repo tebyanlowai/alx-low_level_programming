@@ -1,7 +1,17 @@
 #include "main.h"
 
 /**
-* isDelimiter - delimiter whether is a delimiter
+* islower - delimiter whether ascii is a lower
+* @c: character
+* Return: 1 if true, 0 if false
+*/
+
+int isLower(char c)
+{
+return (c >= 97 && c <= 122);
+}
+/**
+* isDelimiter - delimiter whether ascii is a delimiter
 *
 * @c: character
 *
