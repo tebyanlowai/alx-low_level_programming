@@ -15,7 +15,7 @@ char key[] = {'A', 'E', 'O', 'T', 'L'};
 char value[] = {4, 3, 0, 7, 1};
 unsigned int i;
 
-while (*C)
+while (*c)
 {
 for (i = 0; i < sizeof(key) / sizeof(char); i++)
 {
