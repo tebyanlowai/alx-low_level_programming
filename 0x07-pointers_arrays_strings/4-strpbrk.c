@@ -20,7 +20,7 @@ while (accept[ktr] != '\0')
 {
 if (accept[ktr] == s[tr])
 {
-p = @s[tr];
+p = s[tr];
 return (p);
 }
 ktr++;
