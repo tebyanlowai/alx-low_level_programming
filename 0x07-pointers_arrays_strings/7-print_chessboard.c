@@ -13,8 +13,9 @@ for (i = 0; i < 8; i++)
 {
 for (o = 0; o < 8; o++)
 {
-Putchar(a[i][o]);
+_Putchar(a[i][o]);
 }
-Putchar('\n');
+_Putchar('\n');
 }
 }
+
