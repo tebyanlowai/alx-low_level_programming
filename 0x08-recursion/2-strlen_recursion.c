@@ -12,7 +12,7 @@ int ln = 0;
 
 if (*s > '\0')
 {
-ln += _strlen_recursion(s + 1)  1;
+ln += _strlen_recursion(s + 1) + 1;
 }
 return (ln);
 }
