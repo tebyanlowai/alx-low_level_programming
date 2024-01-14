@@ -11,29 +11,29 @@
 
 int main(int argc, char *argv[])
 {
-if (argc == 2)
-{
-int i, lwastcents = 0, money = atoi(argv[1]);
-int cents[] = {25, 10, 5, 2, 1}
+int cents, mncoin = 0;
 
-for (i = 0; i < 5; i++)
-{
-if (money >= cents[i])
-{
-lwastcents += money / cents[i];
-money = money % cents[i];
-if (money % cents[i] == 0)
-{
-break;
-}
-}
-}
-printf("%d\n", lwastcents)
-}
-else
+if (argc == 1 || argc > 2)
 {
 printf("Error\n");
 return (1);
 }
+
+cents = atoi(argv[1]);
+while (cents > 0)
+{
+if (cents >= 25)
+cents -= 25;
+if (cents >= 10)
+cents -= 10;
+if (cents >= 5)
+cents -= 5;
+if (cents >= 2)
+cents -= 2;
+if (cents >= 1)
+cents -= 1;
+mncoin += 1;
+}
+printf("%d\n", mncoin);
 return (0);
 }
