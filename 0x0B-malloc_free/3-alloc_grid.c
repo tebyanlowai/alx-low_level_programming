@@ -10,15 +10,15 @@
 int **alloc_grid(int width, int height)
 {
 int **top, i, k;
-top = maloc(sizeof(*top) * hieght);
+top = malloc(sizeof(*top) * height);
 
 if (width <= 0 || hieght <= 0 || top <= 0)
 {
-return ('\0');
+return (NULL);
 }
 else
 {
-for (i = 0; i < hight; i++)
+for (i = 0; i < height; i++)
 {
 top[i] = malloc(sizeof(**top) * width);
 if (top[i] == 0)
