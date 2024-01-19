@@ -29,8 +29,7 @@ char *s;
 
 if (ac == 0 || av == NULL)
 return (NULL);
-
-for (i < ac; i++; n++)
+for (; i < ac; i++, n++)
 n += _strlen(av[i]);
 
 s = malloc(sizeof(char) * n + 1);
@@ -39,7 +38,7 @@ return ('\0');
 
 for (i = 0; i < ac; i++)
 {
-for (k = 0; av[i][k] != '\0'; k++; cmpt++)
+for (k = 0; av[i][k] != '\0'; k++, cmpt++)
 s[cmpt] = av[i][k];
 s[cmpt] = '\n';
 cmpt++;
