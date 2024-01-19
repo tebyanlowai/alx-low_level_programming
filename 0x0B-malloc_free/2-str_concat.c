@@ -35,7 +35,7 @@ s2 = "\0";
 
 size1 = _strlen(s1);
 size2 = _strlen(s2);
-b = malloc((size1 + size2) * sizeof(char) + 1);
+b = malloc((size1 + size2) *sizeof(char) + 1);
 
 if (b == 0)
 return (0);
