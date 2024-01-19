@@ -26,7 +26,7 @@ if (top[i] == 0)
 while (i--)
 free(top[i]);
 free(top);
-return ('\0');
+return (NULL);
 }
 
 for (k = 0; k < width; k++)

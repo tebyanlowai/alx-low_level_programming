@@ -45,7 +45,6 @@ b[i] = s1[i];
 else
 b[i] = s2[i - size1];
 }
-
 b[i] = '\0';
 return (b);
 
