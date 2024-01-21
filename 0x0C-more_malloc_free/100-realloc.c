@@ -34,7 +34,7 @@ if (p == NULL)
 return (NULL);
 
 for (i = 0; i < old_size && i < new_size; i++)
-*((char *)p + i) = *((char *)ptr + i)
+*((char *)p + i) = *((char *)ptr + i);
 free(ptr);
 }
 
