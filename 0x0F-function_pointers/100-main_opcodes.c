@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 int b, i;
-char *p;
+char *argv;
 
 if (argc != 2)
 {
@@ -25,19 +25,19 @@ exit(1);
 b = atoi(argv[1]);
 if (b < 0)
 {
-printf("Error\n"); 
+printf("Error\n");
 exit(2);
 }
 
-p = (char *)main;
+argv = (char *)main;
 for (i = 0; i < b; i++)
 {
 if (i == b - 1)
 {
-printf("%02hhx%s\n", argv[i]);
+printf("%.2hhx\n", argv[i]);
 break;
 }
-printf("%02hhx%s\n", argv[i]);
+printf("%.2hhx\n", argv[i]);
 }
 return (0);
 }
