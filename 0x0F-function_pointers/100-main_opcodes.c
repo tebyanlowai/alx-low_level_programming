@@ -2,22 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
-* print_op - printthe op
-* @a: adress of the main function
-* @n: number of byte
-* Return: void
-*/
-void print_op(char *a, int n)
-{
-for (i = 0; i < n; i++)
-{
-printf("%02hhx", a[i]);
-if (i < n - 1)
-printf(" ");
-}
-printf("\n");
-}
 
 /**
 * main - a program that prints the opcodes
@@ -27,9 +11,10 @@ printf("\n");
 * Return: always 0
 */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int b;
+int b, i;
+char *p;
 
 if (argc != 2)
 {
@@ -44,6 +29,15 @@ printf("Error\n");
 exit(2);
 }
 
-print_op((char *)main, b)
+p = (char *)main;
+for (i = 0; i < b; i++)
+{
+if (i == b - 1)
+{
+printf("%02hhx%s\n", argv[i]);
+break;
+}
+printf("%02hhx%s\n", argv[i]);
+}
 return (0);
 }
