@@ -40,6 +40,6 @@ if (b < 0)
 printf("Error\n"), exit(2);
 }
 
-print_op((char *) &main, b)
+print_op((char *) main, b)
 return (0);
 }
