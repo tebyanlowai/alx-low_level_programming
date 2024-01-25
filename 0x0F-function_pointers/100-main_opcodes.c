@@ -12,7 +12,7 @@ void print_op(char *a, int n)
 {
 for (i = 0; i < n; i++)
 {
-printf("%.2hhx", a[i]);
+printf("%02hhx", a[i]);
 if (i < n - 1)
 printf(" ");
 }
@@ -32,14 +32,18 @@ int main(int argc, char **argv)
 int b;
 
 if (argc != 2)
-printf("Error\n"), exit(1);
+{
+printf("Error\n"); 
+exit(1);
+}
 
 b = atoi(argv[1]);
 if (b < 0)
 {
-printf("Error\n"), exit(2);
+printf("Error\n"); 
+exit(2);
 }
 
-print_op((char *) main, b)
+print_op((char *)main, b)
 return (0);
 }
