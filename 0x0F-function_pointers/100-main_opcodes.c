@@ -13,8 +13,8 @@
 
 int main(int argc, char *argv[])
 {
-int b, i;
-char *argv;
+int b;
+char *p = (char *)main;
 
 if (argc != 2)
 {
@@ -29,15 +29,8 @@ printf("Error\n");
 exit(2);
 }
 
-argv = (char *)main;
-for (i = 0; i < b; i++)
-{
-if (i == b - 1)
-{
-printf("%.2hhx\n", argv[i]);
-break;
-}
-printf("%.2hhx\n", argv[i]);
-}
+while (b--)
+printf("%02hhx%s", *p++, b ? " " : "\n")
+
 return (0);
 }
