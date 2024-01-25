@@ -3,6 +3,23 @@
 #include <stdlib.h>
 
 /**
+* print_op - printthe op
+* @a: adress of the main function
+* @n: number of byte
+* Return: void
+*/
+void print_op(char *a, int n)
+{
+for (i = 0; i < n; i++)
+{
+printf("%.2hhx", a[i]);
+if (i < n - 1)
+printf(" ");
+}
+printf("\n");
+}
+
+/**
 * main - a program that prints the opcodes
 * of its own main function.
 * @argc: number of arguments
@@ -12,7 +29,6 @@
 
 int main(int argc, char **argv)
 {
-char *p = (char *)main;
 int b;
 
 if (argc != 2)
@@ -20,10 +36,10 @@ printf("Error\n"), exit(1);
 
 b = atoi(argv[1]);
 if (b < 0)
+{
 printf("Error\n"), exit(2);
+}
 
-while (b--)
-printf("%02hhx%s\n", *p++, b ? " " : "\n");
-
+print_op((char *) &main, b)
 return (0);
 }
