@@ -9,9 +9,9 @@
 */
 
 
-oid print_numbers(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
-int i;
+unsigned int i;
 va_list nb;
 
 va_start(nb, n);
