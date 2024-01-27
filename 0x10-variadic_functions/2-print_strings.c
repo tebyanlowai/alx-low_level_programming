@@ -12,19 +12,25 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 
 char *str;
-int i = n;
-va_list ap;
+int i;
+va_list string;
 
-if (!n)
+
+va_start(string, n);
+
+for (i = 0; i < n; i++)
 {
-printf("\n");
-return;
+str = va_arg(string, char *);
+
+if (str == NULL)
+printf("nil");
+
+else
+printf("%s", str);
+
+if (i != (n- 1) && separator != NULL)
+printf("%s", separator);
 }
-va_start(ap, n);
-
-while (i--)
-printf("%s%s", (str = va_arg(ap, char *)) ? str : "(nill)",
-s ? (separator ? separator : "") : "\n");
-
-va_end(ap);
+printf("\n");
+va_end(string);
 }

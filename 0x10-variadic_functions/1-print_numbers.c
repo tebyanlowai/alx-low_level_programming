@@ -11,17 +11,18 @@
 
 oid print_numbers(const char *separator, const unsigned int n, ...)
 {
-int sm = n;
-va_list ap;
+int i;
+va_list nb;
 
-if (!n)
+va_start(nb, n);
+
+for (i = 0; i < n; i++)
 {
-printf("\n");
-return;
-}
-va_start(ap, n);
+printf("%d", va_arg(nb, int));
 
-while (i--)
-printf("/d%s", va_arg(ap, int), s ? (separator ? separator : "") : "\n");
-va_end(ap);
+if (i != (n - 1) && separator != NULL)
+printf("%s", separator);
+}
+printf("\n");
+va_end(nb);
 }
